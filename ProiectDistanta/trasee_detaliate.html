@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_be312cb4e0892b17b71b2f202dd30324 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_be312cb4e0892b17b71b2f202dd30324" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_be312cb4e0892b17b71b2f202dd30324 = L.map(
+                "map_be312cb4e0892b17b71b2f202dd30324",
+                {
+                    center: [45.7973912, 24.1519202],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1ba546110f9d42855709d5cf6f1c23e8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1ba546110f9d42855709d5cf6f1c23e8.addTo(map_be312cb4e0892b17b71b2f202dd30324);
+        
+    
+            var marker_439ce21dfb3cd65dd0eda25f195d96b6 = L.marker(
+                [45.7973912, 24.1519202],
+                {
+}
+            ).addTo(map_be312cb4e0892b17b71b2f202dd30324);
+        
+    
+        var popup_24bbd7aaaa466229876d085f4794ad37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90bf80475cdb8a73f08edd60112ddcb3 = $(`<div id="html_90bf80475cdb8a73f08edd60112ddcb3" style="width: 100.0%; height: 100.0%;">Start: Sibiu, România</div>`)[0];
+                popup_24bbd7aaaa466229876d085f4794ad37.setContent(html_90bf80475cdb8a73f08edd60112ddcb3);
+            
+        
+
+        marker_439ce21dfb3cd65dd0eda25f195d96b6.bindPopup(popup_24bbd7aaaa466229876d085f4794ad37)
+        ;
+
+        
+    
+    
+            var marker_1c8e680ed0c171ce90708e61f71fa19e = L.marker(
+                [47.0549163, 21.9285231],
+                {
+}
+            ).addTo(map_be312cb4e0892b17b71b2f202dd30324);
+        
+    
+        var popup_172629b17470bbd8ecd2c0364bdcae3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3a95b693f5d06c48df218c1c04c96fe = $(`<div id="html_b3a95b693f5d06c48df218c1c04c96fe" style="width: 100.0%; height: 100.0%;">Destinație: Oradea, Zona Metropolitană Oradea, Bihor, România</div>`)[0];
+                popup_172629b17470bbd8ecd2c0364bdcae3b.setContent(html_b3a95b693f5d06c48df218c1c04c96fe);
+            
+        
+
+        marker_1c8e680ed0c171ce90708e61f71fa19e.bindPopup(popup_172629b17470bbd8ecd2c0364bdcae3b)
+        ;
+
+        
+    
+    
+            var poly_line_050bb2e98766a47bda162b9b3a86457a = L.polyline(
+                [[45.7967577, 24.1531205], [45.79488509999999, 24.1552269], [45.7960618, 24.1589147], [45.80005329999999, 24.1660677], [45.8006304, 24.1674677], [45.7984313, 24.1717887], [45.7980368, 24.1715661], [45.79472089999999, 24.1854662], [45.7977535, 24.186953], [45.9723278, 23.5762105], [45.9866636, 23.54431], [46.514702, 23.7834444], [46.5266724, 23.8007944], [46.7542212, 23.4133785], [46.7535408, 23.3888963], [47.0537489, 22.4171125], [47.0587828, 22.3733532], [47.0367597, 21.9965404], [47.0547316, 21.9403873], [47.053514, 21.9392267], [47.0523074, 21.9388124], [47.0516319, 21.9375761], [47.0527524, 21.9324715], [47.0544146, 21.9334457], [47.0558503, 21.9285809], [47.0554565, 21.928122], [47.0549163, 21.9285231]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_be312cb4e0892b17b71b2f202dd30324);
+        
+    
+            poly_line_050bb2e98766a47bda162b9b3a86457a.bindTooltip(
+                `<div>
+                     Traseu 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7a643828ca686ce4c906d7e46a0b8998 = L.polyline(
+                [[45.7967577, 24.1531205], [45.79488509999999, 24.1552269], [45.7960618, 24.1589147], [45.80005329999999, 24.1660677], [45.8006304, 24.1674677], [45.7984313, 24.1717887], [45.7980368, 24.1715661], [45.79472089999999, 24.1854662], [45.7977535, 24.186953], [45.9107846, 22.8822367], [45.91420069999999, 22.8776953], [46.1164614, 22.7874147], [46.1345403, 22.7837545], [46.3053092, 22.5259901], [46.6481529, 22.3734514], [46.6489871, 22.3734756], [46.6499454, 22.3772751], [46.671503, 22.3255825], [46.6726809, 22.3289377], [46.9824668, 21.9866251], [46.9965555, 21.9794973], [47.0259191, 21.9587383], [47.0488361, 21.939343], [47.04946469999999, 21.9386406], [47.049419, 21.9379424], [47.0511183, 21.9340802], [47.0522901, 21.9345394], [47.0527524, 21.9324715], [47.0544146, 21.9334457], [47.0558503, 21.9285809], [47.0554565, 21.928122], [47.0549163, 21.9285231]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_be312cb4e0892b17b71b2f202dd30324);
+        
+    
+            poly_line_7a643828ca686ce4c906d7e46a0b8998.bindTooltip(
+                `<div>
+                     Traseu 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_5e183061b997417ca00a755b00b7873c = L.polyline(
+                [[45.7967577, 24.1531205], [45.79488509999999, 24.1552269], [45.7960618, 24.1589147], [45.80005329999999, 24.1660677], [45.8006304, 24.1674677], [45.7984313, 24.1717887], [45.7980368, 24.1715661], [45.79472089999999, 24.1854662], [45.7977535, 24.186953], [45.9454851, 22.6293053], [45.9449259, 22.6230297], [46.023748, 22.1356346], [46.1427048, 22.1716182], [46.2734044, 22.3358747], [46.38288300000001, 22.0771459], [46.4218297, 21.9547601], [46.4223085, 21.9546672], [46.4294312, 21.9625888], [46.4308308, 21.9641609], [46.4897394, 21.9860913], [46.5178102, 21.9557898], [46.7730584, 21.9297731], [46.886093, 21.8418787], [46.8911364, 21.8458797], [46.96464539999999, 21.8383881], [46.9936441, 21.8825037], [47.0416798, 21.9018683], [47.04589310000001, 21.9034817], [47.0519799, 21.906506], [47.0559644, 21.9170978], [47.05770039999999, 21.9175113], [47.0568209, 21.919688], [47.0586658, 21.9238496], [47.0560062, 21.9282328], [47.0554565, 21.928122], [47.0549163, 21.9285231]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_be312cb4e0892b17b71b2f202dd30324);
+        
+    
+            poly_line_5e183061b997417ca00a755b00b7873c.bindTooltip(
+                `<div>
+                     Traseu 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
