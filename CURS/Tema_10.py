@@ -1,12 +1,12 @@
 import math
 
 
-# Function to calculate the nth Fibonacci number using memoization
+# Funcție pentru calcularea celui de-al n-lea număr Fibonacci folosind memoizare
 def fibonacci(n, memo=None):
     if n < 0:
-        raise ValueError("Fibonacci is not defined for negative numbers.")
+        raise ValueError("Fibonacci nu este definit pentru numere negative.")
 
-    # Use default mutable argument only for the first call
+    # Folosirea valorii None pentru a preveni comportamentele neașteptate cu obiectele mutabile
     if memo is None:
         memo = {}
 
@@ -21,69 +21,71 @@ def fibonacci(n, memo=None):
         return memo[n]
 
 
-# Function to calculate the area of a circle with input validation
-def circle_area(radius):
-    if not isinstance(radius, (int, float)):
-        raise ValueError("Radius must be a number.")
-    if radius < 0:
-        raise ValueError("Radius cannot be negative.")
-    return math.pi * radius ** 2
+# Funcție pentru calcularea ariei unui cerc cu validare a intrării
+def aria_cercului(raza):
+    # Verificarea dacă raza este un număr valid
+    if not isinstance(raza, (int, float)):
+        raise ValueError("Raza trebuie să fie un număr.")
+    if raza < 0:
+        raise ValueError("Raza nu poate fi negativă.")
+    return math.pi * raza ** 2
 
 
-# Function to find the maximum value in a list using recursion
-def find_max(numbers):
-    if not numbers:  # Check for an empty list
-        raise ValueError("Cannot find the maximum of an empty list.")
-    # Iterative approach to avoid recursion depth issues for large lists
-    current_max = numbers[0]
-    for num in numbers[1:]:
-        if num > current_max:
-            current_max = num
-    return current_max
+# Funcție pentru găsirea valorii maxime dintr-o listă folosind recursivitatea
+def gaseste_maxim(numere):
+    if not numere:  # Verificare pentru listă goală
+        raise ValueError("Nu se poate găsi maximul într-o listă goală.")
+    # Soluție iterativă pentru a evita depășirea stivei în cazul listelor mari
+    maxim_curent = numere[0]
+    for num in numere[1:]:
+        if num > maxim_curent:
+            maxim_curent = num
+    return maxim_curent
 
 
-# Function to compute the geometric mean of a list of numbers
-def geometric_mean(numbers):
-    if not numbers:  # Check for an empty list
-        raise ValueError("Cannot calculate geometric mean of an empty list.")
-    if any(num <= 0 for num in numbers):
-        raise ValueError("All numbers must be positive for geometric mean.")
+# Funcție pentru calcularea mediei geometrice a unei liste de numere
+def media_geometrica(numere):
+    if not numere:  # Verificare pentru listă goală
+        raise ValueError("Nu se poate calcula media geometrică a unei liste goale.")
+    # Verificarea ca toate numerele să fie pozitive
+    if any(num <= 0 for num in numere):
+        raise ValueError("Toate numerele trebuie să fie pozitive pentru media geometrică.")
 
-    product = 1
-    for num in numbers:
-        product *= num
-    return product ** (1 / len(numbers))
+    produs = 1
+    for num in numere:
+        produs *= num
+    return produs ** (1 / len(numere))
 
 
-# Main function to demonstrate the operations
-def main():
-    print("=== Fibonacci ===")
-    n = 30
+# Funcție principală pentru a demonstra operațiile cu date introduse de utilizator
+def principal():
+    # Introducerea unui număr pentru Fibonacci
     try:
-        print(f"The {n}th Fibonacci number is: {fibonacci(n)}")
+        n = int(input("Introduceți un număr pentru calculul Fibonacci: "))
+        print(f"Al {n}-lea număr Fibonacci este: {fibonacci(n)}")
     except ValueError as e:
         print(e)
 
-    print("\n=== Circle Area ===")
-    radius = 5
+    # Introducerea razei cercului
     try:
-        print(f"The area of a circle with radius {radius} is: {circle_area(radius)}")
+        raza = float(input("Introduceți raza cercului: "))
+        print(f"Aria cercului cu raza {raza} este: {aria_cercului(raza)}")
     except ValueError as e:
         print(e)
 
-    print("\n=== Find Max ===")
-    numbers = [1, 3, 2, 8, 5]
+    # Introducerea unei liste de numere pentru găsirea maximului
     try:
-        print(f"The maximum value in the list {numbers} is: {find_max(numbers)}")
+        numere = list(map(int, input("Introduceți o listă de numere separate prin spațiu: ").split()))
+        print(f"Valoarea maximă din listă este: {gaseste_maxim(numere)}")
     except ValueError as e:
         print(e)
 
-    print("\n=== Geometric Mean ===")
-    numbers = [1, 2, 3, 4]
+    # Introducerea unei liste de numere pentru media geometrică
     try:
-        print(f"The geometric mean of {numbers} is: {geometric_mean(numbers)}")
+        numere = list(map(float, input("Introduceți o listă de numere pozitive pentru media geometrică: ").split()))
+        print(f"Media geometrică este: {media_geometrica(numere)}")
     except ValueError as e:
         print(e)
 
 
-main()
+principal()
